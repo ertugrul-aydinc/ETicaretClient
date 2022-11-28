@@ -15,7 +15,7 @@ export class AlertifyService {
     alertify.set('notifier','position',options.position)
     const msj = alertify[options.messageType](message);
     if(options.dismissOthers)
-    msj.dismissOthers();
+      msj.dismissOthers();
   }
 
   dismissAll(){
