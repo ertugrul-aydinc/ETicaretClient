@@ -3,6 +3,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
 import { BaseComponent, SpinnerType } from 'src/app/base/base.component';
 import { Create_Product } from 'src/app/contracts/create_product';
 import { AlertifyService, MessageType, Position } from 'src/app/services/admin/alertify.service';
+import { FileUploadOptions } from 'src/app/services/common/fileupload/fileupload.component';
 import { ProductService } from 'src/app/services/common/models/product.service';
 
 @Component({
@@ -23,6 +24,8 @@ export class CreateComponent extends BaseComponent implements OnInit{
   }
 
   @Output() createdProduct : EventEmitter<Create_Product> = new EventEmitter();
+
+
 
   create(name:HTMLInputElement, stock:HTMLInputElement, price:HTMLInputElement){
     this.showSpinner(SpinnerType.BallSpinFade);
