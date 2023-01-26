@@ -12,7 +12,6 @@ export class OrderComponent implements OnInit {
   constructor(private spinner: NgxSpinnerService) { }
 
   ngOnInit(): void {
-    this.spinner.show();
   }
 
 }

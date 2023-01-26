@@ -89,7 +89,7 @@
                 </div>
                 <ul class="navbar-nav ms-auto ">
                   <li>
-                    <a class="btn btn-outline-warning" type="submit" routerLink="/admin">Yönetim Paneli</a>
+                    <a class="btn btn-outline-warning" type="submit" routerLink="/admin" *ngIf="authService.isAuthenticated">Yönetim Paneli</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link mx-2 text-uppercase" routerLink="products">Products</a>
@@ -106,10 +106,15 @@
                     <a class="nav-link mx-2 text-uppercase" routerLink="baskets"><i class="fa-solid fa-cart-shopping me-1"></i>Sepet</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link mx-2 text-uppercase" href="#" routerLink="login">Giriş Yap</a>
+                    <a class="nav-link mx-2 text-uppercase" href="#" routerLink="login" *ngIf="!authService.isAuthenticated">Giriş Yap</a>
                   </li>
+
                   <li class="nav-item">
-                    <a class="nav-link mx-2 text-uppercase" routerLink="register"><i class="fa-solid fa-circle-user me-1"></i> Kayıt Ol</a>
+                    <a (click)="signOut()" class="nav-link mx-2 text-uppercase" *ngIf="authService.isAuthenticated" style="color: red; cursor: pointer;">Çıkış Yap</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link mx-2 text-uppercase" routerLink="register" *ngIf="!authService.isAuthenticated"><i class="fa-solid fa-circle-user me-1" ></i> Kayıt Ol</a>
                   </li>
                 </ul>
               </div>
