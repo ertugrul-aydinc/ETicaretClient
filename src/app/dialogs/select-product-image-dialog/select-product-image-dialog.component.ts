@@ -57,10 +57,14 @@ export class SelectProductImageDialogComponent extends BaseDialog<SelectProductI
         card.fadeOut(500);
     })
       }
+    }) 
+  }
+
+  showCase(imageId:string){
+    this.spinner.show(SpinnerType.BallSpinFade);
+    this.productService.changeShowcaseImage(imageId, this.data as string, ()=>{
+      this.spinner.hide(SpinnerType.BallSpinFade)
     })
-
-
-    
   }
   
 }
