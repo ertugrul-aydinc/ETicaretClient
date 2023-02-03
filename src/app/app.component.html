@@ -103,7 +103,8 @@
                 </ul>
                 <ul class="navbar-nav ms-auto ">
                   <li class="nav-item">
-                    <a class="nav-link mx-2 text-uppercase" routerLink="baskets"><i class="fa-solid fa-cart-shopping me-1"></i>Sepet</a>
+                    <!-- <a class="nav-link mx-2 text-uppercase" routerLink="baskets"><i class="fa-solid fa-cart-shopping me-1"></i>Sepet</a> -->
+                    
                   </li>
                   <li class="nav-item">
                     <a class="nav-link mx-2 text-uppercase" href="#" routerLink="login" *ngIf="!authService.isAuthenticated">Giriş Yap</a>
@@ -117,6 +118,9 @@
                     <a class="nav-link mx-2 text-uppercase" routerLink="register" *ngIf="!authService.isAuthenticated"><i class="fa-solid fa-circle-user me-1" ></i> Kayıt Ol</a>
                   </li>
                 </ul>
+                <div class="d-flex">
+                  <button type="submit" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#basketModal" (click)="loadComponent()">SEPET</button>
+                </div>
               </div>
             </div>
           </nav>
@@ -135,3 +139,14 @@
 <ngx-spinner name="s1" size="medium" tex type="square-jelly-box"><p style="font-size: 20px; color:white">Loading...</p></ngx-spinner>
 <ngx-spinner name="s2" type="ball-scale-multiple"></ngx-spinner> 
 <ngx-spinner name="s3" type="ball-spin-fade"></ngx-spinner> 
+
+
+<!-- <app-baskets></app-baskets> -->
+
+
+<div class="modal fade" id="basketModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <ng-template appDynamicLoadComponent></ng-template>
+  </div>
+</div>
+
