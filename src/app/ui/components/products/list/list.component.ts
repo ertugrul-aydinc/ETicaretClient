@@ -39,10 +39,11 @@ export class ListComponent extends BaseComponent implements OnInit{
 
 
   products:List_Product[];
+  
 
   async ngOnInit() {
     this.baseUrl = await this.fileService.getBaseStorageUrl();
-
+    
     this.activatedRoute.params.subscribe(async params => {
       this.currentPageNo = parseInt(params["pageNo"] ?? 1);
 
@@ -54,7 +55,7 @@ export class ListComponent extends BaseComponent implements OnInit{
       });
   
       this.products = data.products;
-
+      
       this.products = this.products.map<List_Product>(p => {
           
         const listProduct : List_Product = {
@@ -67,7 +68,7 @@ export class ListComponent extends BaseComponent implements OnInit{
           updatedDate:p.updatedDate,
           productImageFiles:p.productImageFiles
         };
-
+        
         
         return listProduct;
       })
