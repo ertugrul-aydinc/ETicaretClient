@@ -56,7 +56,7 @@ export class DeleteDirective {
           },700, () => {
             this.callback.emit();
             //this.spinner.hide(SpinnerType.BallSpinFade);
-            this.alertiftyService.message("Ürün başarıyla silinmiştir",{
+            this.alertiftyService.message("Başarıyla silinmiştir",{
               dismissOthers:true,
               messageType:MessageType.Success,
               position:Position.TopRight
@@ -64,7 +64,7 @@ export class DeleteDirective {
           });
         }, (errorResponse:HttpErrorResponse) =>{
           this.spinner.hide(SpinnerType.BallSpinFade);
-          this.alertiftyService.message("Ürün silinirken beklenmeyen bir hata oluştu!",{
+          this.alertiftyService.message("Silinirken beklenmeyen bir hata oluştu !",{
             dismissOthers:true,
             messageType:MessageType.Error,
             position:Position.TopRight
