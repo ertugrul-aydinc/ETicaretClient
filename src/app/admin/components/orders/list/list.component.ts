@@ -31,8 +31,8 @@ export class ListComponent extends BaseComponent {
    async getOrders(){
     this.showSpinner(SpinnerType.BallSpinFade);
     const allOrders :{totalOrderCount:number;orders:List_Order[]} = await this.orderService.getAllOrders(
-      this.paginator ? this.paginator.pageIndex:0,this.paginator ? this.paginator.pageSize:5,()=> this.hideSpinner(SpinnerType.BallSpinFade), errorMessage =>{
-      this.alertifyService.message(errorMessage,{
+      this.paginator ? this.paginator.pageIndex:0,this.paginator ? this.paginator.pageSize:5,()=> this.hideSpinner(SpinnerType.BallSpinFade), (errorMessage:any) =>{
+      this.alertifyService.message(errorMessage.message,{
         dismissOthers:true,
         messageType:MessageType.Error,
         position:Position.TopRight
