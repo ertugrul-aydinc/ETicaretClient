@@ -13,6 +13,7 @@ export class DynamicLoadComponentService {
     switch(component){
       case ComponentType.BasketsComponent:
         _component = (await import("../../ui/components/baskets/baskets.component")).BasketsComponent;
+        debugger;
         break;
     }
 

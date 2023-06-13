@@ -11,6 +11,8 @@ import { PasswordResetComponent } from './password-reset/password-reset.componen
 import { UpdatePasswordComponent } from './update-password/update-password.component';
 import { PasswordResetModule } from './password-reset/password-reset.module';
 import { UpdatePasswordModule } from './update-password/update-password.module';
+import { AboutComponent } from './about/about.component';
+import { AboutModule } from './about/about.module';
 
 
 
@@ -21,8 +23,11 @@ import { UpdatePasswordModule } from './update-password/update-password.module';
     
   
    
+  
+    
   ],
   imports: [
+    AboutModule,
     CommonModule,
     ProductsModule,
     BasketsModule,

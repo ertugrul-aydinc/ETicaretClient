@@ -1,139 +1,55 @@
+
 <div class="row">
+    <div class="col-md-10">    
 
-</div>
-<div class="row">
-    <div class="col-md-1"></div>
-    <div class="col-md-10">
-        <!-- <nav class="navbar navbar-expand-lg bg-light">
-            <div class="container-fluid">
-              <a class="navbar-brand" routerLink="">E-Ticaret</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" routerLink="">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" routerLink="products">Products</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" routerLink="baskets">Basket</a>
-                  </li>
-                  <li>
-                    <a class="btn btn-outline-success" type="submit" routerLink="/admin">Yönetim Paneli</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Dropdown
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
-                  </li>
-                  
-                </ul>
-                <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-              </div>
-            </div>
-          </nav> -->
-    
-           <div class="superNav border-bottom py-2 bg-light">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 centerOnMobile">
-                  <select  class="me-3 border-0 bg-light">
-                    <option value="en-us">EN-US</option>
-                  </select>
-                  <span class="d-none d-lg-inline-block d-md-inline-block d-sm-inline-block d-xs-none me-3"><strong>info@somedomain.com</strong></span>
-                  <span class="me-3"><i class="fa-solid fa-phone me-1 text-warning"></i> <strong>1-800-123-1234</strong></span>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 d-none d-lg-block d-md-block-d-sm-block d-xs-none text-end">
-                  <span class="me-3"><i class="fa-solid fa-truck text-muted me-1"></i><a class="text-muted" href="#">Shipping</a></span>
-                  <span class="me-3"><i class="fa-solid fa-file  text-muted me-2"></i><a class="text-muted" href="#">Policy</a></span>
-                </div>
-              </div>
-            </div>
-          </div> 
-          <nav class="navbar navbar-expand-lg bg-white sticky-top navbar-light p-3 shadow-sm">
-            <div class="container">
-              <a class="navbar-brand" routerLink=""><i class="fa-solid fa-shop me-2"></i> <strong>E-TİCARET</strong></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-           
-              <div class="mx-auto my-3 d-lg-none d-sm-block d-xs-block">
-                <div class="input-group">
-                  <span class="border-warning input-group-text bg-warning text-white"><i class="fa-solid fa-magnifying-glass"></i></span>
-                  <input type="text" class="form-control border-warning" style="color:#7a7a7a">
-                  <button class="btn btn-warning text-white">Search</button>
-                </div>
-              </div>
-              <div class=" collapse navbar-collapse" id="navbarNavDropdown">
-                <div class="ms-auto d-none d-lg-block">
-                  <div class="input-group">
-                    <span class="border-warning input-group-text bg-warning text-white"><i class="fa-solid fa-magnifying-glass"></i></span>
-                    <input type="text" class="form-control border-warning" style="color:#7a7a7a">
-                    <button class="btn btn-warning text-white">Search</button>
-                  </div>
-                </div>
-                <ul class="navbar-nav ms-auto ">
-                  <li>
-                    <a class="btn btn-outline-warning" type="submit" routerLink="/admin" *ngIf="authService.isAuthenticated">Yönetim Paneli</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link mx-2 text-uppercase" routerLink="products">Products</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link mx-2 text-uppercase" href="#">Catalog</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link mx-2 text-uppercase" href="#">Hakkımızda</a>
-                  </li>
-                </ul>
-                <ul class="navbar-nav ms-auto ">
-                  <li class="nav-item">
-                    <!-- <a class="nav-link mx-2 text-uppercase" routerLink="baskets"><i class="fa-solid fa-cart-shopping me-1"></i>Sepet</a> -->
-                    
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link mx-2 text-uppercase" href="#" routerLink="login" *ngIf="!authService.isAuthenticated">Giriş Yap</a>
-                  </li>
 
-                  <li class="nav-item">
-                    <a (click)="signOut()" class="nav-link mx-2 text-uppercase" *ngIf="authService.isAuthenticated" style="color: red; cursor: pointer;">Çıkış Yap</a>
-                  </li>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="#!">E-Commerce</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" routerLink="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" routerLink="/about">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" routerLink="/admin" *ngIf="authService.isAuthenticated">Yönetim Paneli</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" routerLink="products">All Products</a></li>
+                            <li><hr class="dropdown-divider" /></li>
+                            <li><a class="dropdown-item" href="#!">Popular Items</a></li>
+                            <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
+                        </ul>
+                    </li>
 
-                  <li class="nav-item">
-                    <a class="nav-link mx-2 text-uppercase" routerLink="register" *ngIf="!authService.isAuthenticated"><i class="fa-solid fa-circle-user me-1" ></i> Kayıt Ol</a>
-                  </li>
+                    <li class="nav-item"><a class="nav-link" routerLink="/login" *ngIf="!authService.isAuthenticated">Login</a></li>
+
+                    <li class="nav-item"><a style="cursor: pointer;" (click)="signOut()" class="nav-link" routerLink="/login" *ngIf="authService.isAuthenticated">Sign Out</a></li>
+
+                    <li class="nav-item"><a class="nav-link" routerLink="/register" *ngIf="!authService.isAuthenticated">Sign Up</a></li>
+
                 </ul>
                 <div class="d-flex">
-                  <button type="submit" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#basketModal" (click)="loadComponent()">SEPET</button>
-                </div>
-              </div>
+                    <button *ngIf="authService.isAuthenticated" class="btn btn-outline-dark" type="submit" (click)="loadComponent()" data-bs-toggle="modal" data-bs-target="#basketModal">
+                        <i class="bi-cart-fill me-1"></i>
+                        Cart
+                    </button>
+                  </div>
             </div>
-          </nav>
+        </div>
+    </nav>
+
+
+          
     </div>
-    <div class="col-md-1"></div>
 </div>
 
 <div class="row">
-    <div class="col-md-1"></div>
+
     <div class="col-md-10">
+      
         <router-outlet></router-outlet>
     </div>
-    <div class="col-md-1"></div>
 </div>
 
 <ngx-spinner name="s1" size="medium" tex type="square-jelly-box"><p style="font-size: 20px; color:white">Loading...</p></ngx-spinner>

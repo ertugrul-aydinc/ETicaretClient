@@ -1,4 +1,4 @@
-import { FacebookLoginProvider, SocialAuthService, SocialUser } from '@abacritt/angularx-social-login';
+import { FacebookLoginProvider, GoogleLoginProvider, SocialAuthService, SocialUser } from '@abacritt/angularx-social-login';
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
@@ -63,5 +63,6 @@ export class LoginComponent extends BaseComponent {
   facebookLogin(){
     this.socialAuthService.signIn(FacebookLoginProvider.PROVIDER_ID);
   }
+
 
 }

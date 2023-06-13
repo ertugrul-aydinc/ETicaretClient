@@ -23,6 +23,7 @@ const routes: Routes = [
   {path: "products/:pageNo", loadChildren : () => import("./ui/components/products/products.module").then(module => module.ProductsModule)},
   {path:"register", loadChildren : () => import("./ui/components/register/register.module").then(module => module.RegisterModule)},
   {path:"login", loadChildren : () => import("./ui/components/login/login.module").then(module => module.LoginModule)},
+  {path:"about", loadChildren : () => import("./ui/components/about/about.module").then(module => module.AboutModule)},
   {path:"password-reset", loadChildren : () => import("./ui/components/password-reset/password-reset.module").then(module => module.PasswordResetModule)},
   {path:"update-password/:userId/:resetToken", loadChildren : () => import("./ui/components/update-password/update-password.module").then(module => module.UpdatePasswordModule)}
 ];

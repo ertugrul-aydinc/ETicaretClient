@@ -1,27 +1,56 @@
-<div class="row">
-    <div class="col-md-3"></div>
+<section class="vh-100">
+  <div class="container py-5 h-100">
+    <div class="row d-flex align-items-center justify-content-center h-100">
+      <div class="col-md-8 col-lg-7 col-xl-6">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
+          class="img-fluid" alt="Phone image">
+      </div>
+      <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
 
-    <div class="col-md-6">
-            <div class="mb-3">
-              <label for="username" class="form-label">Kullanıcı Adı veya E-mail</label>
-              <input #txtUsernameOrEmail type="text" class="form-control" id="username" placeholder="Kullanıcı Adı" formControlName="username">
+        <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Login</p>
 
-              <small class="form-text text-muted">...</small>
+        <form>
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <input #txtUsernameOrEmail type="text" id="username" class="form-control form-control-lg" formControllerName="username" />
+            <label class="form-label" for="username">Username or Email address</label>
+          </div>
+
+          <!-- Password input -->
+          <div class="form-outline mb-4">
+            <input #txtPassword type="password" id="password" class="form-control form-control-lg" />
+            <label class="form-label" for="password">Password</label>
+          </div>
+
+          <div class="d-flex justify-content-around align-items-center mb-4">
+            <!-- Checkbox -->
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
+              <label class="form-check-label" for="form1Example3"> Remember me </label>
             </div>
+            <a href="#!">Forgot password?</a>
+          </div>
 
-            <div class="mb-3">
-              <label for="password" class="form-label">Şifre</label>
-              <input #txtPassword type="password" class="form-control" id="password" placeholder="Şife">
-            </div>
+          <!-- Submit button -->
+          <button routerLink="/products" type="submit" class="btn btn-primary btn-lg btn-block"
+          (click)="login(txtUsernameOrEmail.value,txtPassword.value)">Sign in</button>
 
+          <div class="divider d-flex align-items-center my-4">
+            <p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
+          </div>
+
+          <a class="btn btn-primary btn-lg btn-block" style="background-color: #3b5998"
+            role="button" (click)="facebookLogin()">
+            <i class="fab fa-facebook-f me-2"></i>Continue with Facebook
+          </a>
+          
+          <a class="btn btn-primary btn-lg btn-block" style="background-color: #b9202a"
+            role="button">
             <asl-google-signin-button></asl-google-signin-button>
-            <img src="../../../assets/facebook.png" style="width: 30px; height: 30px; cursor: pointer;" (click)="facebookLogin()">
+            <i class="fab fa-twitter me-2"></i>Continue with Google</a>
 
-            <br>
-            <button style="margin-top: 5px;" type="submit" class="btn btn-primary" (click)="login(txtUsernameOrEmail.value,txtPassword.value)">Giriş Yap</button>
-
-            <a style="margin-top: 5px; margin-left: 5px;" routerLink="/password-reset" class="btn btn-secondary" (click)="login(txtUsernameOrEmail.value,txtPassword.value)">Şifremi Unuttum</a>
+        </form>
+      </div>
     </div>
-
-    <div class="col-md-3"></div>
-</div>
+  </div>
+</section>

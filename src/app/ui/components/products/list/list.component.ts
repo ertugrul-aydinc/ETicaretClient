@@ -105,6 +105,7 @@ export class ListComponent extends BaseComponent implements OnInit{
     _basketItem.productId = product.id;
     _basketItem.quantity = 1;
     await this.basketService.add(_basketItem);
+    debugger;
     this.hideSpinner(SpinnerType.BallScaleMultiple);
     this.toastrService.message("Ürün sepete eklenmiştir.","Sepete Eklendi !",{
       messageType:ToastrMessageType.Success,

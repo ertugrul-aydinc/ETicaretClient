@@ -84,7 +84,7 @@ export class BasketsComponent extends BaseComponent implements OnInit {
       position:ToastrPosition.TopRight
     })
 
-    this.router.navigate(["/"]);
+    this.router.navigate(["/products"]);
       }
     })
 
